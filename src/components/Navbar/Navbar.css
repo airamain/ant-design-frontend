@@ -1,0 +1,23 @@
+.tophead {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: transparent;
+}
+
+@media (max-width:450px) {
+  .tophead {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.mouseHover:hover {
+  transform: scale(1.5);
+  transition-duration: 0.5s;
+}

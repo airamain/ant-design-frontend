@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+.bgwhite{
+  background: url("./components//Image/bgwhite.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.bgdark{
+  background: url("./components//Image/bgdark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.whitemode {
+  color: black !important;
+}
+
+.darkmode {
+  color: white !important;
+}
+
+.blue{
+  color: rgb(16, 189, 233) !important;
+}
+
+
