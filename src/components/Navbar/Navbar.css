@@ -1,20 +1,21 @@
-.tophead {
+.tophead{
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 @media (max-width:450px) {
-  .tophead {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+  .tophead{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  
 }
 
 .mouseHover:hover {

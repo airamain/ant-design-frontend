@@ -1,0 +1,43 @@
+.flexcenterback {
+    display: flex;
+    flex-direction: column;  
+  }
+  
+  .overhidden{
+      margin: 0px 20px;
+      overflow-x: hidden;
+  }
+  
+  .overhidden1{
+    overflow-x: hidden;
+  }
+  
+  .circle{
+      border-radius:  10rem;
+      padding: 2rem 0rem !important;
+      margin: 2rem 0rem;
+      border: rgba(251,90,225,1) 1px solid !important;
+  }
+  
+  
+  .bgwhitecard {
+    border-radius: 2rem !important;
+    padding: 25px 0px !important;
+    background: white !important;
+    margin: 2rem 0rem !important;
+  }
+  
+  .bgdarkcard {
+    border-radius: 2rem !important;
+    padding: 25px 0px !important;
+    margin: 2rem 0rem !important;
+    background: black !important;
+  }
+  
+  .whitemode {
+    color: black !important;
+  }
+  
+  .darkmode {
+    color: white !important;
+  }

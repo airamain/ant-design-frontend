@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Modal, Form, Input, Button, message } from "antd";
 import { UserAddOutlined } from "@ant-design/icons";
-import { Modal, Form, Input, Button } from "antd";
 import axios from 'axios';
 
-export default function CreateUser() {
+export default function CreateUser({ darkMode }) {
   const emptyForm = {userName: '', password: ''},
   [success, setSuccess] = useState(false),
   [visible, setVisible] = useState(false),
@@ -15,7 +15,11 @@ export default function CreateUser() {
     axios.post("auth", form)
     .then(response => {
       if (response.data.auth) setSuccess(true);
-    }).catch(e => console.log('error :>> ', e));
+      message.error('Usuario Creado.');
+    }).catch(e => {
+      console.log('error :>> ', e);
+      message.error('Hubo un error.');
+    });
   },
   layout = {
     labelCol: {
@@ -41,19 +45,34 @@ export default function CreateUser() {
   }, [visible]);
   return (
     <>
-      <Button type="link" onClick={() => setVisible(true)}>
-        <UserAddOutlined />
-        Crear Usuario
-      </Button>
+      {darkMode === false ?
+        <Button type="link" className="whitemode" onClick={() => setVisible(true)}>
+          <UserAddOutlined />
+          Crear Usuario
+        </Button>
+      :
+        <Button type="link" className="darkmode" onClick={() => setVisible(true)}>
+          <UserAddOutlined />
+          Crear Usuario
+        </Button>
+      }
+
       <Modal
         centered
         title="Crear Usuario"
         visible={visible}
         onOk={() => setVisible(false)}
         onCancel={() => setVisible(false)}
-        footer={[]}
+        footer={null}
       >
-        <Form onSubmit={handleSubmit} {...layout}>
+        <Form
+          onSubmit={handleSubmit}
+          {...layout}
+          name="basic"
+          initialValues={{
+            remember: true,
+          }}
+        >
           <Form.Item
             label="Nombre de Usuario"
             name="userName"
@@ -79,7 +98,7 @@ export default function CreateUser() {
           >
             <Input.Password value={form.password} name="password" onChange={handleChange} />
           </Form.Item>
-          
+
           <Form.Item {...tailLayout}>
             {
               success ? <h5>Usuario creado. Ahora puede iniciar sesión</h5> :

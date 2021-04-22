@@ -1,20 +1,30 @@
-.flexcenterback{
+.flexcenterback {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    width: 100%;
-}
-
-.ant-table{
-    background-color: transparent !important;
-}
-
-.ant-table-thead > tr > th {
-    background-color: transparent !important;
-}
-
-.ant-table-thead > tr > th, .ant-table-tbody > tr > td{
-    padding: 24px 24px !important;
-}
-
+    flex-direction: column;  
+  }
+  
+  .circle {
+    border-radius:  10rem;
+    padding: 2rem 0rem !important;
+    border: rgba(251,90,225,1) 1px solid !important;
+  }
+  
+  .bgwhitecard {
+    border-radius: 2rem;
+    padding: 25px 0px;
+    background: white !important;
+  }
+  
+  .bgdarkcard {
+    border-radius: 2rem;
+    padding: 25px 0px;
+    background: black !important;
+  }
+  
+  .whitemode {
+    color: black !important;
+  }
+  
+  .darkmode {
+    color: white !important;
+  }

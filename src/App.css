@@ -1,19 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif !important; 
 }
 
 .bgwhite{
-  background: url("./components//Image/bgwhite.jpg");
-  background-repeat: no-repeat;
+  background: rgb(255,217,234);
+  background: radial-gradient(circle, rgba(255,217,234,1) 0%, rgba(255,255,255,1) 100%);
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
 .bgdark{
-  background: url("./components//Image/bgdark.jpg");
-  background-repeat: no-repeat;
+  background: rgb(10,35,57);
+  background: radial-gradient(circle, rgba(10,35,57,1) 0%, rgba(0,0,0,1) 100%);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.bgdarkex{
+  background: rgb(10,35,57);
+  background: radial-gradient(circle, rgba(10,35,57,1) 0%, rgba(0,0,0,1) 100%);
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -32,4 +47,14 @@
   color: rgb(16, 189, 233) !important;
 }
 
+.btnpink{
+  background: rgb(216,78,246) !important;
+  background: linear-gradient(90deg, rgba(216,78,246,1) 0%, rgba(251,90,225,1) 100%) !important;
+}
 
+.modalblack{
+  background-color: black !important;
+}
+.modallight{
+  background-color: white !important;
+}
